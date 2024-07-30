@@ -1,7 +1,7 @@
 ---
 title: "Cabbages"
-author: "Put your name here!"
-date: "put the date here"
+author: "Amia Little!"
+date: " 07/28/24"
 output:
   html_document:
     df_print: paged
@@ -22,9 +22,9 @@ veggy <- cabbages
  
 ### Is there a difference in average VitC between c39 and c52 cultivation methods?  
 
-$H_0$: There is no difference in the average vitC content of cabbages based on cultivation method
+$H_0$: There is no difference in the average vitC content of cabbages based on cultivation method c39 and c52
 
-$H_A$ There is a difference in the average vitC content of cabbages based on cultivation method
+$H_A$ There is a difference in the average vitC content of cabbages based on cultivation method c39 and c52
 
 # Methods
 
@@ -48,6 +48,7 @@ Numerical~Categorical so we use the Numerica~Cat helper file
 plot(VitC~Cult,data=veggy)
 ```
 
+VitC c39 has about 50 % while Cult c52 has about 60%
 
 ### Numerical Descriptive Results
 
@@ -56,6 +57,8 @@ plot(VitC~Cult,data=veggy)
 ```{r}
 favstats(VitC~Cult,data=veggy)
 ```
+
+There is a differencde in each category
 
 
 
@@ -67,9 +70,34 @@ favstats(VitC~Cult,data=veggy)
 ```{r}
 t.test(VitC~Cult,data=veggy)
 ```
+The p-value= 0.00000003405
 
+The p-value is less than 0.5 therefore we reject the null hypothesis
 
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!--> 
+
+$H_0$: There is no difference in the average vitC content of cabbages based on cultivation method c39 and c52
+
+$H_A$ There is a difference in the average vitC content of cabbages based on cultivation method c39 and c52
+
+Vitamin C is numerical, cultivation is categorical. 
+
+Numerical~Categorical so we use the Numerica~Cat helper file
+
+VitC c39 has about 50 % while Cult c52 has about 60%
+
+There is a differencde in each category 
+
+The p-value= 0.00000003405
+
+The p-value is less than 0.5 therefore we reject the null hypothesis
+
+We conclude that theres is a difference in difference in the average vitC content of cabbages based on cultivation method c39 and c52 therefore $H_A$ is correct. 
+
+
+
+
+
